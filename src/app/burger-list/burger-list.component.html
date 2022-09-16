@@ -1,0 +1,18 @@
+<table class="table table-striped table-hover">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Ingredientes</th>
+            <th>Salsa</th>
+            <th>Precio</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let burger of burgers" [ngClass]="{'clearance': burger.clearance}"> 
+            <td><img [src]="burger.image" [alt]="burger.name"></td>
+            <td>{{burger.ingredients}}</td>
+            <td>{{burger.sauce}}</td>
+            <td>{{burger.price | currency}}</td>
+        </tr>
+    </tbody>
+</table>
