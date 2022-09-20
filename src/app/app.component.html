@@ -1,24 +1,17 @@
 <ul class="nav justify-content-center">
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="#">Active</a>
+    <a class="nav-link active" aria-current="page"  [routerLink]="['/']">Space Burger</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" [routerLink]="['/']">Home</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">Link</a>
+    <a class="nav-link" [routerLink]="['/about']">Quienes somos</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link disabled">Disabled</a>
+    <a class="nav-link disabled">Contacto</a>
   </li>
 </ul>
 <div class="container">
-<div class="row">
-  <div class="col-8"> 
-    <app-burger-list></app-burger-list>
-  </div>
-  <div class="col-4"> 
-    Carrito de compras
-  </div>
-</div>
+  <router-outlet></router-outlet>
 </div>

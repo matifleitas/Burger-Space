@@ -5,4 +5,5 @@ export interface Burger {
     price: number;
     image: string;
     clearance: boolean;
+    quantity: number;
 }

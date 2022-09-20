@@ -16,7 +16,8 @@ export class BurgerListComponent implements OnInit {
     sauce: "Tártara",
     price: 750,
     image: "assets/images/marcian.jpg",
-    clearance: false
+    clearance: false,
+    quantity: 0
   },
   {
     name: "Apolo-11",
@@ -24,7 +25,8 @@ export class BurgerListComponent implements OnInit {
     sauce: "BBQ",
     price: 900,
     image: "assets/images/apolo-11.jpg",
-    clearance: false
+    clearance: false,
+    quantity: 0
   },
   {
     name: "Andrómeda",
@@ -32,7 +34,8 @@ export class BurgerListComponent implements OnInit {
     sauce: "Mostaza americana",
     price: 1050,
     image: "assets/images/andromeda.jpg",
-    clearance: true
+    clearance: true,
+    quantity: 0
   },
   {
     name: "Jupiter Veggie",
@@ -40,12 +43,24 @@ export class BurgerListComponent implements OnInit {
     sauce: "Guacamole",
     price: 850,
     image: "assets/images/jupiter.jpg",
-    clearance: true
+    clearance: true,
+    quantity: 0
   },
 ]
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  upQuantity(burger: Burger): void {
+    burger.quantity++;
+  }
+
+  downQuantity(burger: Burger): void {
+    if(burger.quantity > 0) {
+      burger.quantity--;
+    }
+    
   }
 
 }

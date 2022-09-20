@@ -5,6 +5,7 @@
             <th>Ingredientes</th>
             <th>Salsa</th>
             <th>Precio</th>
+            <th>Compra</th>
         </tr>
     </thead>
     <tbody>
@@ -13,6 +14,10 @@
             <td>{{burger.ingredients}}</td>
             <td>{{burger.sauce}}</td>
             <td>{{burger.price | currency}}</td>
+            <td><button class="btn btn-primary btn-sm" (click)="downQuantity(burger)">-</button>
+                {{burger.quantity}}
+                <button class="btn btn-primary btn-sm" (click)="upQuantity(burger)">+</button>
+            </td>
         </tr>
     </tbody>
 </table>
